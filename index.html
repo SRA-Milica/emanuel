@@ -5,9 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EMANUEL DOT COM</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
 </head>
 <body>
     <div class="container">
+        <!-- Hamburger Menu -->
+        <div class="hamburger" onclick="toggleDropdown()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <div class="dropdown">
+            <a href="/gallery">Gallery</a>
+        </div>
+
         <div class="column column-details">
             <div class="flip-card">
                 <div class="flip-card-inner">
@@ -24,10 +39,10 @@
 
             <div class="column-text">   
                 <h1>Meet Emanuel, Your Paperbag <span>HR Specialist!</span></h1>
-            <p>Emanuel is here to listen and support you. 
-                As our dedicated HR specialist, he’s committed to your well-being and is always available for your concerns. 
-                You can trust him!
-            </p>
+                <p>Emanuel is here to listen and support you. 
+                    As our dedicated HR specialist, he’s committed to your well-being and is always available for your concerns. 
+                    You can trust him!
+                </p>
             </div>
         </div>
         <div class="column column-form">
@@ -45,5 +60,12 @@
             </form>
         </div>
     </div>
+
+    <script>
+        function toggleDropdown() {
+            const hamburger = document.querySelector('.hamburger');
+            hamburger.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

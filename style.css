@@ -7,6 +7,55 @@ body {
   height: 100vh;
 }
 
+/* Hamburger Menu Styling */
+.hamburger {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger div {
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  padding: 10px;
+  display: none;
+  z-index: 999;
+}
+
+.dropdown a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  font-size: 16px;
+}
+
+.dropdown a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hamburger.active+.dropdown {
+  display: block;
+}
+
 .container {
   display: flex;
   height: 100vh;
@@ -32,7 +81,8 @@ body {
   background: linear-gradient(to bottom, #dce6a4 0%, #e0e5d3 50%, #dbdfe2 100%);
   height: 100%;
   display: flex;
-  flex-direction: column; /* Ensures items are stacked vertically */
+  flex-direction: column;
+  /* Ensures items are stacked vertically */
   justify-content: center;
   align-items: center;
 }
@@ -82,7 +132,8 @@ form label {
   color: #fff;
 }
 
-form input, form textarea {
+form input,
+form textarea {
   margin-bottom: 10px;
   height: 40px;
   border: 1px solid #769a6e;
@@ -120,10 +171,11 @@ form button:hover {
 
 @keyframes fall {
   0% {
-      transform: translateY(-10px) rotate(0deg);
+    transform: translateY(-10px) rotate(0deg);
   }
+
   100% {
-      transform: translateY(100vh) rotate(360deg);
+    transform: translateY(100vh) rotate(360deg);
   }
 }
 
@@ -148,14 +200,16 @@ form button:hover {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
 }
 
-.flip-card-front img, .flip-card-back img {
+.flip-card-front img,
+.flip-card-back img {
   width: 100%;
   height: 100%;
   border-radius: 25px;
