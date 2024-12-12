@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMANUEL DOT COM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="column column-details">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="emanuel.jpg" alt="Emanuel">
+                        <img src="santahat.png" class="santa-hat" alt="Santa Hat">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="emanuel2.jpg" alt="Emanuel">
+                        <img src="santahat.png" class="santa-hat" alt="Santa Hat">
+                    </div>
+                </div>
+            </div>
+
+            <div class="column-text">
+                <h1>Meet Emanuel, Your Paperbag <span>HR Specialist!</span></h1>
+            <p>Emanuel is here to listen and support you. 
+                As our dedicated HR specialist, he’s committed to your well-being and is always available for your concerns. 
+                You can trust him!
+            </p>
+            </div>
+        </div>
+        <div class="column column-form">
+            <form action="https://formspree.io/f/mpwzleqy" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

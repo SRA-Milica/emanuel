@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <header>
+        <h1>Image Gallery</h1>
+    </header>
+    <main>
+        <div class="gallery">
+            <img src="images/1.jpg" alt="Description of image 1" onclick="openPreview('images/1.jpg')">
+            <img src="images/2.jpg" alt="Description of image 2" onclick="openPreview('images/2.jpg')">
+            <img src="images/3.jpg" alt="Description of image 3" onclick="openPreview('images/3.jpg')">
+            <img src="images/4.png" alt="Description of image 4" onclick="openPreview('images/4.png')">
+            <img src="images/5.png" alt="Description of image 5" onclick="openPreview('images/5.png')">
+            <img src="images/6.png" alt="Description of image 6" onclick="openPreview('images/6.png')">
+        </div>
+        <div id="popup" class="popup hidden">
+            <span class="close" onclick="closePreview()">&times;</span>
+            <img id="popup-img" src="" alt="Image preview">
+        </div>
+    </main>
+    <script>
+    function openPreview(src) {
+        const popup = document.getElementById('popup');
+        const popupImg = document.getElementById('popup-img');
+        popupImg.src = src;
+        popup.classList.add('visible');  // Add the visible class
+    }
+
+    function closePreview() {
+        const popup = document.getElementById('popup');
+        popup.classList.remove('visible');  // Remove the visible class
+    }
+
+    // Close the popup when clicking outside the image
+    document.getElementById('popup').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closePreview();
+        }
+    });
+</script>
+
+</body>
+</html>
